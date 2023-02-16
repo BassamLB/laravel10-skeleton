@@ -8,9 +8,14 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 
+const props = defineProps({
+    name: String,
+    email : String,
+});
+
 const form = useForm({
-    name: '',
-    email: '',
+    name: props.name,
+    email: props.email,
     password: '',
     password_confirmation: '',
     terms: false,
