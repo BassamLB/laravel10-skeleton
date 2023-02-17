@@ -33,3 +33,9 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+// testing
+Route::post('/test', function () {
+
+    return redirect()->back()->with('toast', 'Toast Endpoint!');
+});
